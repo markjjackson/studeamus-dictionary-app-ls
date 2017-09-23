@@ -1,0 +1,39 @@
+@import "~Styles/colors";
+
+.result {
+  display: block;
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: 1px solid $color-grey;
+  > div {
+    margin: 20px 0;
+  }
+}
+
+.latin {
+  font-weight: bold;
+  font-size: 20px;
+  color: $color-main;
+  letter-spacing: 1px;
+}
+
+.latinOrth {
+  font-size: 12px;
+  color: $color-dark-grey;
+  letter-spacing: 1px;
+}
+
+.definitionContainer {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.7;
+  .definitionContainer {
+    padding-left: 20px;
+  }
+}
+
+.definitionsNumber {
+  font-weight: bold;
+  font-size: 16px;
+  color: $color-main;
+}
