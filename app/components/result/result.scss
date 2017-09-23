@@ -6,11 +6,11 @@
   width: 100%;
   border-bottom: 1px solid $color-grey;
   > div {
-    margin: 20px 0;
+    margin: 10px 0;
   }
 }
 
-.latin {
+.latin{
   font-weight: bold;
   font-size: 20px;
   color: $color-main;
@@ -23,15 +23,30 @@
   letter-spacing: 1px;
 }
 
+.gender,
+.declension {
+  font-size: 12px;
+  font-style: italic;
+  color: $color-main;
+  letter-spacing: 1px;
+}
+
+.grammarInfo {
+  font-size: 12px;
+  color: $color-dark-grey;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
 .definitionContainer {
   padding-top: 5px;
   padding-bottom: 5px;
   line-height: 1.7;
   .definitionContainer {
+    border-left: 1px solid $color-main;
     padding-left: 20px;
   }
 }
-
 .definitionsNumber {
   font-weight: bold;
   font-size: 16px;

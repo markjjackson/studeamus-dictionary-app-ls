@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import styles from './result.scss'
 import connect from 'Redux/connect'
-import { transformMarkdown } from 'Util/markdown'
 
 const getDefinition = (def, i) => {
   return (
     <div>
-      <span className={styles.definitionsNumber}>{ ++i + '. '}</span>{ def }
+      <span className={styles.definitionsNumber}>{ '~ ' }</span>{ def }
     </div>
   )
 }
@@ -31,6 +30,9 @@ class Result extends Component {
     const {
       key,
       title_orthography,
+      main_notes,
+      gender,
+      declension,
       senses
     } = this.props.word
     return (
@@ -40,6 +42,12 @@ class Result extends Component {
         <div>
           <span className={styles.latin}>{ key + ' ' }</span>
           <span className={styles.latinOrth}>{ title_orthography }</span>
+          <span className={styles.gender}>{ gender ? ` ${gender.toLowerCase()}` : null }</span>
+          <span className={styles.declension}>{ declension ? ` ${declension}` : null }</span>
+        </div>
+
+        <div className={styles.grammarInfo}>
+          { main_notes }
         </div>
 
         { mapDefinitions(senses) }
